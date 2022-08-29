@@ -7,21 +7,40 @@ import { useTheme } from 'next-themes'
 const Header = () => {
 
 	const [activeButtonIndex, setActiveButtonIndex] = useState(1); // For NavTag
-
+	
 	// Modal state
 	const [modal, setModal] = useState(false);
-
-
-
+	
 	// For theme : dark & light
 	const [mounted, setMounted] = useState(false)
-	const { theme, setTheme } = useTheme()
+	// const { theme, setTheme } = useTheme('dark')
 
 	useEffect(() => {
 		setMounted(true)
 	}, [])
 
+	// ------------
+
+	const {systemTheme, theme, setTheme} = useTheme()
+
+	console.log("systemTheme",systemTheme)
+	console.log("theme",theme);
+
+	const renderThemeChanger = () => {
 	if (!mounted) { return null; }
+		const currentTheme = theme === 'system' ? systemTheme : theme;
+		console.log("currentTheme",currentTheme)
+		if (currentTheme === 'dark') {
+			return (<HiSun className="text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
+		}
+		else {
+			return (<HiMoon className="text-3xl sm:text-5xl text-[#161B22] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
+		}
+	}
+	// ------------
+
+
+	// if (!mounted) { return null; }
 
 	return (
 		<>
@@ -115,10 +134,12 @@ const Header = () => {
 			</nav>
 
 			{/* Theme Toggle */}
-			<div className="absolute bottom-5 right-5">
-				<HiMoon className={`text-3xl sm:text-5xl text-[#161B22] cursor-pointer ${theme !== 'light' && 'hidden'}`} onClick={() => { setTheme("dark") }} />
-				<HiSun className={`text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer ${theme !== 'dark' && 'hidden'}`} onClick={() => { setTheme("light") }} />
-			</div>
+			{/* <div className="absolute bottom-5 right-5">
+				<HiMoon className={`text-3xl sm:text-5xl text-[#161B22] cursor-pointer ${theme !== 'light' ? 'hidden' : 'block'}`} onClick={() => { setTheme("dark") }} />
+				<HiSun className={`text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer ${theme !== 'dark' ? 'hidden' : 'block'}`} onClick={() => { setTheme("light") }} />
+			</div> */}
+
+			{renderThemeChanger()}
 
 		</>
 	)
