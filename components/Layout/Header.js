@@ -31,10 +31,10 @@ const Header = () => {
 		const currentTheme = theme === 'system' ? systemTheme : theme;
 		console.log("currentTheme",currentTheme)
 		if (currentTheme === 'dark') {
-			return (<HiSun className="text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
+			return (<HiSun className="absolute bottom-5 right-5 text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
 		}
 		else {
-			return (<HiMoon className="text-3xl sm:text-5xl text-[#161B22] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
+			return (<HiMoon className="absolute bottom-5 right-5 text-3xl sm:text-5xl text-[#161B22] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
 		}
 	}
 	// ------------
