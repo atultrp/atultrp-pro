@@ -13,34 +13,23 @@ const Header = () => {
 	
 	// For theme : dark & light
 	const [mounted, setMounted] = useState(false)
-	// const { theme, setTheme } = useTheme('dark')
 
 	useEffect(() => {
 		setMounted(true)
 	}, [])
 
-	// ------------
-
 	const {systemTheme, theme, setTheme} = useTheme()
-
-	console.log("systemTheme",systemTheme)
-	console.log("theme",theme);
 
 	const renderThemeChanger = () => {
 	if (!mounted) { return null; }
 		const currentTheme = theme === 'system' ? systemTheme : theme;
-		console.log("currentTheme",currentTheme)
 		if (currentTheme === 'dark') {
-			return (<HiSun className="absolute bottom-5 right-5 text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
+			return (<HiSun className="absolute bottom-5 right-5 text-4xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
 		}
 		else {
-			return (<HiMoon className="absolute bottom-5 right-5 text-3xl sm:text-5xl text-[#161B22] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
+			return (<HiMoon className="absolute bottom-5 right-5 text-4xl sm:text-5xl text-[#161B22] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
 		}
 	}
-	// ------------
-
-
-	// if (!mounted) { return null; }
 
 	return (
 		<>
@@ -88,10 +77,10 @@ const Header = () => {
 			</nav>
 
 			{/* Mobile Version */}
-			<nav className="sm:hidden bg-white dark:bg-[#161B22] dark:text-white py-2 px-3 border-b-2 border-gray-300 sticky top-0 z-30 items-center">
+			<nav className="sm:hidden bg-white dark:bg-[#161B22] dark:text-white py-3 px-4 border-b-2 border-gray-300 sticky top-0 z-30 items-center">
 				<div className=" flex justify-between items-center">
-					<h1 className="text-xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest">Atul Tripathi{`>`}</h1>
-					<HiMenuAlt1 className="text-2xl" onClick={() => { modal ? setModal(false) : setModal(true) }} />
+					<h1 className="text-2xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest">Atul Tripathi{`>`}</h1>
+					<HiMenuAlt1 className="text-4xl" onClick={() => { modal ? setModal(false) : setModal(true) }} />
 				</div>
 				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-3 py-2 shadow-md rounded bg-white dark:bg-[#161B22] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
 					<NavTag
@@ -132,12 +121,6 @@ const Header = () => {
 					/>
 				</ul>
 			</nav>
-
-			{/* Theme Toggle */}
-			{/* <div className="absolute bottom-5 right-5">
-				<HiMoon className={`text-3xl sm:text-5xl text-[#161B22] cursor-pointer ${theme !== 'light' ? 'hidden' : 'block'}`} onClick={() => { setTheme("dark") }} />
-				<HiSun className={`text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer ${theme !== 'dark' ? 'hidden' : 'block'}`} onClick={() => { setTheme("light") }} />
-			</div> */}
 
 			{renderThemeChanger()}
 

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const NavTag = ({ tagTitle, urlPath, classes, onClick }) => {
   return (
     <Link href={urlPath}>
-      <li className={`font-semibold px-2 py-1 cursor-pointer hover:shadow-lg hover:bg-blue-500 hover:text-white rounded ${classes}`} onClick={onClick}>{tagTitle}</li>
+      <li className={`font-semibold text-md px-2 py-1 cursor-pointer hover:shadow-lg hover:bg-blue-500 hover:text-white rounded ${classes}`} onClick={onClick}>{tagTitle}</li>
     </Link>
   )
 }
