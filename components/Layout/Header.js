@@ -26,7 +26,7 @@ const Header = () => {
 	return (
 		<>
 			{/* Desktop Version */}
-			<nav className="hidden sm:flex justify-around py-4 border-b-2 border-gray-300 sticky top-0 z-30 bg-white items-center dark:bg-black dark:text-white">
+			<nav className="hidden sm:flex justify-around py-4 border-b-2 border-gray-300 sticky top-0 z-30 bg-white items-center dark:bg-[#161B22] dark:text-white">
 				<ul className="flex space-x-10 text-lg items-center">
 					<NavTag
 						tagTitle="Home"
@@ -69,12 +69,12 @@ const Header = () => {
 			</nav>
 
 			{/* Mobile Version */}
-			<nav className="sm:hidden bg-white dark:bg-black dark:text-white py-2 px-3 border-b-2 border-gray-300 sticky top-0 z-30 items-center">
+			<nav className="sm:hidden bg-white dark:bg-[#161B22] dark:text-white py-2 px-3 border-b-2 border-gray-300 sticky top-0 z-30 items-center">
 				<div className=" flex justify-between items-center">
 					<h1 className="text-xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest">Atul Tripathi{`>`}</h1>
 					<HiMenuAlt1 className="text-2xl" onClick={() => { modal ? setModal(false) : setModal(true) }} />
 				</div>
-				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-3 py-2 shadow-md rounded bg-white dark:bg-black dark:text-white dark:shadow-white dark:shadow-sm`}>
+				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-3 py-2 shadow-md rounded bg-white dark:bg-[#161B22] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
 					<NavTag
 						tagTitle="Home"
 						urlPath={"/"}
@@ -116,7 +116,7 @@ const Header = () => {
 
 			{/* Theme Toggle */}
 			<div className="absolute bottom-5 right-5">
-				<HiMoon className={`text-3xl sm:text-5xl text-black cursor-pointer ${theme !== 'light' && 'hidden'}`} onClick={() => { setTheme("dark") }} />
+				<HiMoon className={`text-3xl sm:text-5xl text-[#161B22] cursor-pointer ${theme !== 'light' && 'hidden'}`} onClick={() => { setTheme("dark") }} />
 				<HiSun className={`text-3xl sm:text-5xl text-[#FFF80A] cursor-pointer ${theme !== 'dark' && 'hidden'}`} onClick={() => { setTheme("light") }} />
 			</div>
 
