@@ -82,7 +82,7 @@ const Header = () => {
 					<h1 className="text-2xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest">Atul Tripathi{`>`}</h1>
 					<HiMenuAlt1 className="text-4xl" onClick={() => { modal ? setModal(false) : setModal(true) }} />
 				</div>
-				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-3 py-2 shadow-md rounded bg-white dark:bg-[#161B22] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
+				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-4 py-4 shadow-md rounded bg-white dark:bg-[#161B22] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
 					<NavTag
 						tagTitle="Home"
 						urlPath={"/"}
