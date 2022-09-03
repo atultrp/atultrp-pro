@@ -10,11 +10,11 @@ const About = () => {
       <div className="flex mt-6 items-center">
         <div className="space-y-2 mx-16 w-3/5">
           <h3 className="text-3xl font-medium custom-font">
-            Hi, I'm a Web Developer from Bangalore, India
+            Hi, I &apos; m a Web Developer from Bangalore, India
           </h3>
           <p>
             {/* I am a web developer. I'm pursuing Bachelors of Science from University of Delhi and in the lockdown I taught myself many skills of computer science. I love tea because I'm an Indian, ha ha!! If you wanna know more about myself then keep reading. */}
-            I'm a Fullstack JavaScript Developer. I love learning new things and challenging myself. Currently I'm focused on developing and maintaining awesome interfaces & experiences at Riskcovry for insurTech industry.
+            I &apos; m a Fullstack JavaScript Developer. I love learning new things and challenging myself. Currently I &apos; m focused on developing and maintaining awesome interfaces & experiences at Riskcovry for insurTech industry.
             </p>
           <p>
             My passion for software lies with dreaming up ideas 🤓️ and making them come true with elegant interfaces 👨‍💻️. I take great care in the experience, architecture, and code quality of the things I build.
