@@ -6,10 +6,18 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  color: #004c53e5;
+  background-color: #004c53;
+
 }
 
 .custom-font {
   font-family: 'Acme', sans-serif;
+}
+
+.custom-font-2 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a {
