@@ -2,7 +2,7 @@ import React from 'react'
 
 const UpperSec = () => {
   return (
-    <div className="sm:grid grid-cols-2 px-10 dark:bg-[#004c53] dark:text-white bg-white text-[#004c53e5] pb-10 sm:pb-0">
+    <div className="sm:grid grid-cols-2 px-10 dark:bg-[#004c53] dark:text-white bg-white text-[#004c53e5] sm:pb-0">
       <div className="">
         <img src="/assets/headerImg.png" alt="Image" className="dark:hidden" />
         <img src="/assets/headerImg.svg" alt="Image" className="hidden dark:block" />
@@ -19,9 +19,18 @@ const UpperSec = () => {
             Riskcovry
           </a>{" "}for insurTech industry.
         </p>
-        <button className="px-3 py-2 bg-white border border-[#004c53] hover:bg-[#004c53] hover:text-white font-semibold my-2 rounded dark:bg-[#004c53] dark:border-white dark:hover:bg-white dark:hover:text-[#004c53]">
-          Get In Touch!
-        </button>
+        <div className="space-x-5">
+          <button className="px-3 py-2 bg-white border border-[#004c53] hover:bg-[#004c53] hover:text-white font-semibold my-2 rounded dark:bg-[#004c53] dark:border-white dark:hover:bg-white dark:hover:text-[#004c53] ease-in-out duration-300">
+            <a href="https://www.linkedin.com/in/atultrp-/">
+              Get In Touch!
+            </a>
+          </button>
+          <button className="px-3 py-2 bg-white border border-[#004c53] hover:bg-[#004c53] hover:text-white font-semibold my-2 rounded dark:bg-[#004c53] dark:border-white dark:hover:bg-white dark:hover:text-[#004c53] ease-in-out duration-300">
+            <a href="https://www.linkedin.com/in/atultrp-/">
+              Resume
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import About from '../components/About'
+import Projects from '../components/Projects'
 import UpperSec from '../components/UpperSec'
 
 export default function Home() {
@@ -13,7 +14,12 @@ export default function Home() {
       </Head>
 
       <UpperSec />
-      <About />
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects/>
+      </div>
 
     </div>
   )
