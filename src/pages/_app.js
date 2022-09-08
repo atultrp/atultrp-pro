@@ -5,10 +5,12 @@ import { ThemeProvider } from 'next-themes'
 
 function MyApp({ Component, pageProps }) {
   return <>
-    <ThemeProvider attribute='class' defaultTheme = 'system' enableSystem = {true}>
+    <ThemeProvider attribute='class' defaultTheme='system' enableSystem={true}>
       <Header />
       <Component {...pageProps} />
-      <Footer />
+      <div id="contact">
+        <Footer />
+      </div>
     </ThemeProvider>
   </>
 }
