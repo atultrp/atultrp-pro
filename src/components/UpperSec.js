@@ -26,7 +26,7 @@ const UpperSec = () => {
             </a>
           </button>
           <button className="px-3 py-2 bg-white border border-[#004c53] hover:bg-[#004c53] hover:text-white font-semibold my-2 rounded dark:bg-[#004c53] dark:border-white dark:hover:bg-white dark:hover:text-[#004c53] ease-in-out duration-300">
-            <a href="https://www.linkedin.com/in/atultrp-/">
+            <a href="assets/resume.pdf" target="_blank">
               Resume
             </a>
           </button>

@@ -7,23 +7,22 @@ const About = () => {
   return (
     <div className="dark:bg-[#004c53] bg-white dark:text-white py-1 px-6 sm:px-20 font-medium">
       <h2 className="custom-font text-4xl sm:text-5xl uppercase font-semibold text-center pt-16">About Me</h2>
-
       <div className="flex flex-col-reverse sm:flex-row sm:mt-6 items-center">
         <div className="space-y-3 sm:mx-16 sm:w-3/5">
           <h3 className="text-3xl font-medium custom-font">
             Hi, I &apos; m a Web Developer from Bangalore, India.
           </h3>
-          <p>
+          <p className="text-base sm:text-lg">
             My passion for software lies with dreaming up ideas and making them come true with elegant interfaces. I take great care in the experience, architecture, and code quality of the things I build.
             I am also an <span className="font-semibold">open-source enthusiast</span> and <span className="font-semibold">maintainer</span>. I learned a lot from the open-source community and I love how collaboration and knowledge sharing happened through <span className="font-semibold">open-source</span> .
           </p>
-          <p>
+          <p className="text-base sm:text-lg">
             Other than this I've also worked as a freelancer on <span className="font-semibold"> Upwork </span> from time to time. My main focus these days is building accessible, inclusive products and digital experiences at {" "}
             <a href="https://riskcovry.com/" className="font-semibold underline">
               Riskcovry
             </a>.
           </p>
-          <div>
+          <div className="text-base sm:text-lg">
             Here are a few technologies I've been working with recently:
             <ul className="grid grid-cols-2 mt-3">
               <li className="flex items-center space-x-2">
