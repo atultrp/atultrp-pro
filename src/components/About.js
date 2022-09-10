@@ -1,8 +1,6 @@
 import React from 'react'
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { TbPoint } from 'react-icons/tb';
-import SkillCard from './shared/skillCard';
-
 
 const About = () => {
   return (
