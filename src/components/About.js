@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { TbPoint } from 'react-icons/tb';
+import SkillCard from './shared/skillCard';
 
 
 const About = () => {
@@ -56,6 +57,13 @@ const About = () => {
             <a href="https://www.instagram.com/atultrp" className="hover:scale-150 duration-200"><BsInstagram /></a>
           </div>
         </div>
+      </div>
+
+      {/* Skill set */}
+
+      <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16">Technical Skills</h2>
+      <div>
+        <SkillCard />
       </div>
 
     </div>
