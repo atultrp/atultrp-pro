@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { TbPoint } from 'react-icons/tb';
+import SkillCard from './SkillCard';
 
 const About = () => {
   return (
@@ -60,7 +61,12 @@ const About = () => {
       {/* Skill set */}
 
       <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16">Technical Skills</h2>
-      
+      <div>
+        <SkillCard 
+          title="HTML"
+          skillPerc="70%"
+        />
+      </div>
     </div>
   )
 }
