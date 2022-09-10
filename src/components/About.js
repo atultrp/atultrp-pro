@@ -62,10 +62,7 @@ const About = () => {
       {/* Skill set */}
 
       <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16">Technical Skills</h2>
-      <div>
-        <SkillCard />
-      </div>
-
+      
     </div>
   )
 }
