@@ -1,4 +1,3 @@
-import React from 'react'
 import { BiLinkExternal } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 
