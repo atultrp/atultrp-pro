@@ -4,11 +4,82 @@ import { TbPoint } from 'react-icons/tb';
 import SkillCard from './SkillCard';
 
 const About = () => {
+
+  const skillData2 = [
+    {
+      title: "HTML/CSS",
+      skillPerc: "90%"
+    },
+    {
+      title: "Javascript",
+      skillPerc: "85%"
+    },
+    {
+      title: "ReactJs",
+      skillPerc: "85%"
+    },
+    {
+      title: "Redux",
+      skillPerc: "75%"
+    },
+    {
+      title: "NextJs",
+      skillPerc: "85%"
+    },
+    {
+      title: "Tailwind",
+      skillPerc: "100%"
+    },
+    {
+      title: "Rest APIs",
+      skillPerc: "70%"
+    },
+    {
+      title: "Bootstrap",
+      skillPerc: "100%"
+    },
+  ]
+
+  const skillData1 = [
+    {
+      title: "NodeJs",
+      skillPerc: "70%"
+    },
+    {
+      title: "ExpressJs",
+      skillPerc: "70%"
+    },
+    {
+      title: "jQuery",
+      skillPerc: "75%"
+    },
+    {
+      title: "MongoDB",
+      skillPerc: "70%"
+    },
+    {
+      title: "MySQL",
+      skillPerc: "85%"
+    },
+    {
+      title: "Python",
+      skillPerc: "85%"
+    },
+    {
+      title: "C/Cpp",
+      skillPerc: "75%"
+    },
+    {
+      title: "Java",
+      skillPerc: "75%"
+    },
+  ]
+
   return (
     <div className="dark:bg-[#004c53] bg-white dark:text-white py-1 px-6 sm:px-20 font-medium">
       <h2 className="custom-font text-4xl sm:text-5xl uppercase font-semibold text-center pt-16">About Me</h2>
       <div className="flex flex-col-reverse sm:flex-row sm:mt-6 items-center">
-        <div className="space-y-3 sm:mx-16 sm:w-3/5">
+        <div className="space-y-3 sm:mx-2 md:mx-10 lg:mx-16 sm:w-3/5">
           <h3 className="text-3xl font-medium custom-font">
             Hi, I &apos; m a Web Developer from Bangalore, India.
           </h3>
@@ -46,7 +117,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="mx-auto my-5 sm:w-2/5 sm:-ml-36">
+        <div className="mx-auto my-5 sm:w-2/5 sm:-ml-10 md:-ml-20 lg:-ml-36">
           <img src="/assets/atultrp.jpg" alt="profile" className="w-56 rounded-full border-8 border-gray-100 mx-auto" />
           <p className="text-3xl text-center font-medium custom-font mt-2">Atul Tripathi</p>
           <div className="flex justify-center space-x-4 text-2xl my-3">
@@ -60,12 +131,23 @@ const About = () => {
 
       {/* Skill set */}
 
-      <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16">Technical Skills</h2>
-      <div>
-        <SkillCard 
-          title="HTML"
-          skillPerc="70%"
-        />
+      <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16 text-center">Technical Skills</h2>
+
+      <div className="lg:grid grid-cols-3 items-center mt-5">
+        <div className="flex flex-wrap mt-3 justify-center">
+          {skillData2.map(item => {
+            return <SkillCard skillData={item} />
+          })}
+        </div>
+        <div className="w-72 mx-auto my-4">
+          <img src="assets/skillBoyLight2.png" className="dark:hidden" />
+          <img src="assets/skillBoyDark.png" className="hidden dark:block" />
+        </div>
+        <div className="flex flex-wrap mt-3 justify-center">
+          {skillData1.map(item => {
+            return <SkillCard skillData={item} />
+          })}
+        </div>
       </div>
     </div>
   )

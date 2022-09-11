@@ -34,7 +34,7 @@ const Header = () => {
 	return (
 		<>
 			{/* Desktop Version */}
-			<nav className="hidden sm:flex justify-around py-4 border-b-2 border-gray-50 sticky top-0 z-30 bg-[#004c53] text-white items-center	 dark:text-white">
+			<nav className="hidden md:flex justify-around py-4 border-b-2 border-gray-50 sticky top-0 z-30 bg-[#004c53] text-white items-center	 dark:text-white">
 				<ul className="flex space-x-10 text-lg items-center">
 					<NavTag
 						tagTitle="Home"
@@ -77,7 +77,7 @@ const Header = () => {
 			</nav>
 
 			{/* Mobile Version */}
-			<nav className="sm:hidden bg-[#004c53] py-3 px-4 border-b-2 border-gray-50 sticky top-0 z-30 items-center">
+			<nav className="md:hidden bg-[#004c53] py-3 px-4 border-b-2 border-gray-50 sticky top-0 z-30 items-center">
 				<div className=" flex justify-between items-center">
 					<h1 className="text-2xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest text-white">Atul Tripathi{`>`}</h1>
 					<HiMenuAlt1 className="text-4xl text-white" onClick={() => { modal ? setModal(false) : setModal(true) }} />
