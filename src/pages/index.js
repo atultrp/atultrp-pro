@@ -18,7 +18,7 @@ export default function Home() {
         <About />
       </div>
       <div id="projects">
-        <Projects/>
+        <Projects />
       </div>
 
     </div>

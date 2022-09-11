@@ -1,6 +1,7 @@
 import React from 'react'
 import { BsGithub, BsTwitter, BsLinkedin, BsInstagram } from 'react-icons/bs';
 import { TbPoint } from 'react-icons/tb';
+import Experience from './Experience';
 import SkillCard from './SkillCard';
 
 const About = () => {
@@ -149,6 +150,10 @@ const About = () => {
           })}
         </div>
       </div>
+
+      {/* Experience */}
+      <h2 className="custom-font text-3xl sm:text-4xl uppercase font-semibold pt-16 text-center">Experience</h2>
+      <Experience />
     </div>
   )
 }
