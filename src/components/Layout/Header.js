@@ -27,7 +27,7 @@ const Header = () => {
 			return (<HiSun className="z-50 fixed bottom-5 right-5 text-4xl sm:text-5xl text-[#FFF80A] cursor-pointer" role="button" onClick={() => setTheme('light')} />)
 		}
 		else {
-			return (<HiMoon className="z-50 fixed bottom-5 right-5 text-4xl sm:text-5xl text-[#004c53] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
+			return (<HiMoon className="bg-white rounded-full z-50 fixed bottom-5 right-5 text-4xl sm:text-5xl text-[#004c53] cursor-pointer" role="button" onClick={() => setTheme('dark')} />)
 		}
 	}
 
