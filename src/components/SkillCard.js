@@ -9,7 +9,7 @@ const SkillCard = ({ skillData }) => {
       <div className=" rounded-t-md px-2 py-1 sm:px-3 sm:py-2 font-bold text-lg sm:text-xl ">
         {skillData.title}
       </div>
-      <div class={`rounded-b-md rounded-r-md ${progressClass ? "bg-white" : "bg-[#004c53]"} h-2 dark:bg-white`} style={{ width: skillData.skillPerc }}></div>
+      <div class={`rounded-b-md rounded-r-md ${progressClass ? "bg-white" : "bg-[#004c53]"} h-2 dark:bg-white`} style={{ width: "100%" }}></div>
     </div>
   )
 }
