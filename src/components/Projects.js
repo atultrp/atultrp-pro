@@ -56,7 +56,7 @@ const Projects = () => {
       id: '7',
       imgSrc: 'project/starNotebook.png',
       name: 'Star Notebook',
-      description: 'This is the best word processing app for all your works, from taking down quick notes to writing your books, eBooks, organizing your documents and daily tasks.',
+      description: 'The best word processing app for all your works, from taking down quick notes to writing your books, eBooks, organizing your documents & daily tasks.',
       projectSrc: 'https://star-notebook.vercel.app/',
       githubSrc: 'https://github.com/atultrp/StarNoteBook'
     },
