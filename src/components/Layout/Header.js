@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { HiSun, HiMoon, HiMenuAlt1 } from 'react-icons/hi';
 import { GiCrossedBones } from 'react-icons/gi';
 import NavTag from './NavTag';
 import { useTheme } from 'next-themes'
+import useOnClickOutside from '../../hooks/useOnClickOutside';
 
 const Header = () => {
 
@@ -13,6 +14,12 @@ const Header = () => {
 	
 	// For theme : dark & light
 	const [mounted, setMounted] = useState(false)
+
+	const popUpRef = useRef();
+
+  useOnClickOutside(popUpRef, () => {
+    setModal(false)
+  });
 
 	useEffect(() => {
 		setMounted(true)
@@ -77,12 +84,12 @@ const Header = () => {
 			</nav>
 
 			{/* Mobile Version */}
-			<nav className="md:hidden bg-[#004c53] py-3 px-4 border-b-2 border-gray-50 sticky top-0 z-30 items-center">
+			<nav className="md:hidden bg-[#004c53] py-3 px-4 border-b-2 border-gray-50 sticky top-0 z-30 items-center" ref={popUpRef}>
 				<div className=" flex justify-between items-center">
 					<h1 className="text-2xl font-bold uppercase cursor-pointer items-center custom-font tracking-widest text-white">Atul Tripathi{`>`}</h1>
 					<HiMenuAlt1 className="text-4xl text-white" onClick={() => { modal ? setModal(false) : setModal(true) }} />
 				</div>
-				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-4 py-4 shadow-md rounded bg-white dark:bg-[#1b1b1b] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
+				<ul className={`${modal ? 'block' : 'hidden'} absolute right-2 px-4 py-4 shadow-md rounded bg-white dark:bg-[#004c53] dark:text-white dark:shadow-white dark:shadow-none dark:border dark:border-gray-600`}>
 					<NavTag
 						tagTitle="Home"
 						urlPath={"/"}
@@ -90,7 +97,7 @@ const Header = () => {
 							setActiveButtonIndex(1)
 							setModal(false)
 						}}
-						classes={activeButtonIndex === 1 ? "shadow-md bg-[#004c53] text-white" : ""}
+						classes={activeButtonIndex === 1 ? "shadow-md bg-white text-[#004c53]" : ""}
 					/>
 					<NavTag
 						tagTitle="About"
