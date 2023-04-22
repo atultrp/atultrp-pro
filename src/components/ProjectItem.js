@@ -13,7 +13,7 @@ const ProjectItem = ({ projectInfo }) => {
             <a href={projectInfo.projectSrc} className={`hover:scale-150 duration-200 mr-4 text-2xl ${!projectInfo.projectSrc && "hidden"}`} target="_blank">
               <BiLinkExternal />
             </a>
-            <a href={projectInfo.githubSrc} className="hover:scale-150 duration-200 text-2xl" target="_blank">
+            <a href={projectInfo.githubSrc} className={`hover:scale-150 duration-200 text-2xl ${!projectInfo.githubSrc && "hidden"}`} target="_blank">
               <BsGithub />
             </a>
           </div>

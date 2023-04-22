@@ -5,6 +5,13 @@ const Projects = () => {
 
   const projectInfo = [
     {
+      id: '8',
+      imgSrc: 'project/shortBio.png',
+      name: 'Short Bio App',
+      description: 'This website features bios of diverse individuals, from actors to athletes. This aim to inspire and motivate through their stories.',
+      projectSrc: 'https://short-bio.vercel.app',
+    },
+    {
       id: '2',
       imgSrc: 'project/worldRank.png',
       name: 'World Rank App',
