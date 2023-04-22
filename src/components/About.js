@@ -6,75 +6,7 @@ import SkillCard from './SkillCard';
 
 const About = () => {
 
-  const skillData2 = [
-    {
-      title: "HTML/CSS",
-      skillPerc: "90%"
-    },
-    {
-      title: "Javascript",
-      skillPerc: "85%"
-    },
-    {
-      title: "ReactJs",
-      skillPerc: "85%"
-    },
-    {
-      title: "Redux",
-      skillPerc: "75%"
-    },
-    {
-      title: "NextJs",
-      skillPerc: "85%"
-    },
-    {
-      title: "Tailwind",
-      skillPerc: "100%"
-    },
-    {
-      title: "Rest APIs",
-      skillPerc: "70%"
-    },
-    {
-      title: "Bootstrap",
-      skillPerc: "100%"
-    },
-  ]
-
-  const skillData1 = [
-    {
-      title: "NodeJs",
-      skillPerc: "70%"
-    },
-    {
-      title: "ExpressJs",
-      skillPerc: "70%"
-    },
-    {
-      title: "jQuery",
-      skillPerc: "75%"
-    },
-    {
-      title: "MongoDB",
-      skillPerc: "70%"
-    },
-    {
-      title: "MySQL",
-      skillPerc: "85%"
-    },
-    {
-      title: "Python",
-      skillPerc: "85%"
-    },
-    {
-      title: "C/Cpp",
-      skillPerc: "75%"
-    },
-    {
-      title: "Java",
-      skillPerc: "75%"
-    },
-  ]
+  const skillData = ["HTML/CSS", "Javascript", "ReactJs", "Redux", "NextJs", "Tailwind", "Rest APIs", "Bootstrap", "NodeJs", "ExpressJs", "jQuery", "MongoDB", "MySQL", "Python", "C/Cpp", "Java"]
 
   return (
     <div className="dark:bg-[#004c53] bg-white dark:text-white py-1 px-6 sm:px-20 font-medium">
@@ -136,8 +68,8 @@ const About = () => {
 
       <div className="lg:grid grid-cols-3 items-center mt-5">
         <div className="flex flex-wrap mt-3 justify-center">
-          {skillData2.map(item => {
-            return <SkillCard skillData={item} />
+          {skillData.slice(0,8).map(item => {
+            return <SkillCard skill={item} />
           })}
         </div>
         <div className="w-72 mx-auto my-4">
@@ -145,8 +77,8 @@ const About = () => {
           <img src="assets/skillBoyDark.png" className="hidden dark:block" />
         </div>
         <div className="flex flex-wrap mt-3 justify-center">
-          {skillData1.map(item => {
-            return <SkillCard skillData={item} />
+          {skillData.slice(8).map(item => {
+            return <SkillCard skill={item} />
           })}
         </div>
       </div>
