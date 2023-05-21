@@ -5,7 +5,6 @@ import Experience from './Experience';
 import SkillCard from './SkillCard';
 
 const About = () => {
-
   const skillData = ["HTML/CSS", "Javascript", "ReactJs", "Redux", "NextJs", "Tailwind", "Rest APIs", "Bootstrap", "NodeJs", "ExpressJs", "jQuery", "MongoDB", "MySQL", "Python", "C/Cpp", "Java"]
 
   return (
